@@ -16,6 +16,8 @@ class ScheduleThread(threading.Thread):
     # TODO: Add additional parameters here which will contain all the data
     #       needed to perform the scheduling algorithm
     def __init__(self, ): 
+        
+        # This connects this class to the parent threading.Thread class
         threading.Thread.__init__(self)
 
         # TODO: Initialze appropriate class member variables
@@ -100,7 +102,7 @@ def main():
 
     for threadNum in range(0, num_threads) :
         
-        # TODO: Add the parameters to the ScheduleThread constructor here
+        # TODO: Add the appropriate parameters to the ScheduleThread constructor here
         newThread = ScheduleThread()
         
         threads.append(newThread)
