@@ -1,0 +1,69 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title" : "Operating Systems Assignment 2 Input",
+    "description": "Schema for the input file for assignment 2",
+    "type" : "object",
+    "properties" : {
+        "options" : {
+            "description": "Options related to this input file",
+            "type": "object",
+            "properties": {
+                "table_size" : {
+                    "description": "Size of the process table",
+                    "type" : "integer"
+                }
+            }
+        },
+        "processes" : {
+            "description" : "Set of processes that wil be scheduled by the program",
+            "type" : "array",
+            "items" : {
+                "type" : "object",
+                "properties" : {
+                    "process_name": {
+                        "description": "Name of the process. Used for the add_process action",
+                        "type" : "string"
+                    },
+                    "process_id" : {
+                        "description": "ID of the process. Used for the remove_process action",
+                        "type" : "integer"
+                    },
+                    "cpu_needed" : {
+                        "description": "Number of CPU cycles needed for the process's CPU burst",
+                        "type" : "integer"
+                    },
+                    "priority" : {
+                        "description": "Priority level of the process. Lower numbers have higher priority",
+                        "type" : "integer"
+                    },
+                    "cpu_used" : {
+                        "description": "Output-only value showing how much CPU has been used by the process",
+                        "type" : "integer"
+                    }
+                }
+            }
+
+        },
+        "schedule" : {
+            "description": "Instructions for process scheduling",
+            "type": "object",
+            "properties": {
+                "scheduling_algorithm" : {
+                    "description" : "The scheduling algorithm to use when the 'schedule' action is executed",
+                    "type" : "string",
+                    "enum" : ["fcfs", "priority_round_robin"]
+                },
+                "scheduling_quantum" : {
+                    "description" : "The number of cycles to schedule at a time (default is 1)",
+                    "type" : "integer"
+                },
+                "num_threads" : {
+                    "description" : "The number of threads to use for scheduling (default is 1)",
+                    "type" : "integer"
+                }
+            },
+            "required" : [ "scheduling_algorithm"]
+        }
+    },
+    "required": [ "options", "processes", "schedule"]
+}

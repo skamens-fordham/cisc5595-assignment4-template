@@ -8,6 +8,7 @@
 #include "cpu_scheduler_base.h"
 #include "process.h"
 
+#include <deque>
 #include <mutex>
 
 using namespace std;
@@ -25,19 +26,19 @@ class CpuSchedulerFcfs : public CpuSchedulerBase {
         virtual bool requeueProcess(Process process)    ;
 
         // Get the process id of the next process to be scheduled
-        // If no processes remain to schedule, return -1.
-        // NOTE: The process being scheduled should be removed
-        //       as part of this function
+        // If no processes remain to schedule, return -1
         virtual int nextProcess();
 
     private:
-        // Use the same data structure as you used for this class
-        // in assignment 3 (or copy from the solution for assignment 3
-        // once that is available)
-
-        // This mutex should be used to synchronize access to 
-        // class methods
+        
+        // This mutex will be used to serialize access to 
+        // the data structure
         mutex m_mutex;
+        
+        
+        // TODO: Copy the data structure from assignment 3
+
+        
 };
 
 #endif
