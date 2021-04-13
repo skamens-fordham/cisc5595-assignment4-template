@@ -18,10 +18,7 @@
 using namespace std;
 
 struct processRunnerData {
-    int threadNum;
-    ProcessTable * pTable;
-    CpuSchedulerBase *pScheduler;
-    int schedulingQuantum;
+    // TODO: Add the variables neeeded for the threads.
 };
 
 mutex printMutex;
