@@ -37,5 +37,7 @@ Think about what methods of your process table will be used as part of the execu
 # execute
 The `execute.cpp` and `execute.py` files in this directory contain TODO entries for how to implement your thread-based execution. Implement the code as directed in this file.
 
+# Assignment Submission
+When you have completed the assignment, be sure to commit your changes and push them to github, and then upload your submit.txt file to Blackboard.
 
 
