@@ -17,8 +17,10 @@
 
 using namespace std;
 
+// TODO: This structure will contain all of the data needed for the processRunner
+//       to execute the scheduling algorithm. Add appropriate data members here
 struct processRunnerData {
-    // TODO: Add the variables neeeded for the threads.
+
 };
 
 mutex printMutex;
