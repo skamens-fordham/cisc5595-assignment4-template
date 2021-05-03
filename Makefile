@@ -11,4 +11,4 @@ execute: execute.o $(libobj)
 
 .PHONY: clean
 clean:
-	rm -f process_test process_test.o run_processes execute.o $(libobj)
+	rm -f process_test process_test.o execute execute.o $(libobj)
